@@ -46,7 +46,16 @@ public class Job {
     public int hashCode() {
         return Objects.hash(getId());
     }
-
+    @Override
+    public String toString() {
+        return "\n" +
+                "ID: " + getId() + "\n" +
+                "Name: " + getName() + "\n" +
+                "Employer: " + getEmployer() + "\n" +
+                "Location: " + getLocation() + "\n" +
+                "Position Type: " + getPositionType() + "\n" +
+                "Core Competency: " + getCoreCompetency() + "\n";
+    }
     public String getName() {
         if (name == null || name.isEmpty()) {
             return "Data not available";

@@ -48,13 +48,14 @@ public class Job {
     }
     @Override
     public String toString() {
-        return "\n" +
-                "ID: " + getId() + "\n" +
-                "Name: " + getName() + "\n" +
-                "Employer: " + getEmployer() + "\n" +
-                "Location: " + getLocation() + "\n" +
-                "Position Type: " + getPositionType() + "\n" +
-                "Core Competency: " + getCoreCompetency() + "\n";
+
+        return ("\n" +
+                "ID: "+ (this.getId()+"\n"+
+                "Name: "+ (this.getName().toString().isEmpty() ? "Data not available" : this.getName())+"\n"+
+                "Employer: "+ (this.getEmployer().toString().isEmpty() ? "Data not available" : this.getEmployer())+"\n"+
+                "Location: "+ (this.getLocation().toString().isEmpty() ? "Data not available" : this.getLocation())+"\n"+
+                "Position Type: "+ (this.getPositionType().toString().isEmpty() ? "Data not available" :this.getPositionType()) +"\n"+
+                "Core Competency: "+ (this.getCoreCompetency().toString().isEmpty() ? "Data not available" : this.getCoreCompetency())+"\n"));
     }
     public String getName() {
         if (name == null || name.isEmpty()) {
